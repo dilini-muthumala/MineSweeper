@@ -8,7 +8,6 @@ import java.util.Properties;
  * Loader class for providing the Game configurations
  */
 public class ConfigLoader {
-    private static final int MAX_DEFAULT_GRID_SIZE = 26;
     private static final double MAX_MINE_DENSITY = 0.35;
 
     private static final Properties props = new Properties();
