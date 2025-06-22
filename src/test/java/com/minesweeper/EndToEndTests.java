@@ -8,7 +8,7 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class EndToEndTest {
+public class EndToEndTests {
     @Test
     void shouldInitializeEmptyGridOfCorrectSize() {
         Set<String> mines = Set.of("B2", "C3", "D1");

@@ -15,7 +15,7 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class UnitTest {
+public class UnitTests {
     private MinesweeperGame game;
 
     @BeforeEach
@@ -61,7 +61,7 @@ public class UnitTest {
     void testPrintBoardOutputsGrid() {
         ConsoleUI ui = new ConsoleUI();
         MinesweeperBoard board = new MinesweeperBoard(2, Set.of("A1"));
-        board.reveal("A2"); // reveal A2
+        board.reveal("A2");
 
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream originalOut = System.out;

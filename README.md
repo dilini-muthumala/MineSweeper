@@ -1,4 +1,4 @@
-# Minesweeper CLI (TDD-Driven Java Game)
+# Minesweeper CLI 
 
 A command-line implementation of the classic Minesweeper game written in Java and built using Test-Driven Development (TDD). Designed to be testable, modular, and runnable as a standalone JAR.
 
@@ -19,9 +19,11 @@ A command-line implementation of the classic Minesweeper game written in Java an
 
 ## ⚡ Quick Start
 
+Make sure you have Java 17 and Maven installed.
+
 ```bash
-# Clone the repo
-$ git clone https://github.com/your-username/minesweeper-cli.git
+# Clone the repo 
+$ git clone https://github.com/dilini-muthumala/MineSweeper.git
 $ cd minesweeper-cli
 
 # Build and run the game
@@ -75,17 +77,6 @@ C _ _ _ _ _
 D _ _ _ _ _
 E _ _ _ _ _
 
-Select a square to reveal (e.g. A1): B1
-This square contains 1 adjacent mines.
-
-Here is your updated minefield:
-  1 2 3 4 5
-A 1 1 _ _ _
-B 1 _ _ _ _
-C _ _ _ _ _
-D _ _ _ _ _
-E _ _ _ _ _
-
 Select a square to reveal (e.g. A1): B2
 Oh no, you detonated a mine! Game over.
 
@@ -104,16 +95,25 @@ Press Enter to play again...
 Use coordinate input like `A1`, `C3`, etc., to reveal squares. Avoid the mines!
 
 ---
+## 🧩 Game Rules
+### Select your difficulty level:
 
-## 🏗️ Building from Source
+* **Easy**: 9x9 grid with 10 mines
+* **Medium**: 16x16 grid with 40 mines
+* **Hard**: 30x30 grid with 160 mines
+You can also choose a custom grid and mine count when prompted.
 
-Make sure you have Java 17 and Maven installed.
+### Gameplay
 
-```bash
-mvn clean package
-```
+* Type coordinates like `A1`, `B2`, etc. to reveal a cell.
+* The numbers show how many adjacent cells contain mines.
+* Empty cells will automatically reveal neighbors until numbers are encountered.
+* Use **flags** (coming soon) to mark suspected mines.
 
-Output JAR: `target/minesweeper-cli-1.0-SNAPSHOT.jar`
+### Winning / Losing
+
+* If you hit a mine... **game over!** 💥
+* Win by revealing all cells that do **not** contain mines.
 
 ---
 
@@ -191,32 +191,6 @@ com/minesweeper
 
 ---
 
-## 🧩 Basic Gameplay
-
-### Select your difficulty level:
-
-* **Easy**: 9x9 grid with 10 mines
-* **Medium**: 16x16 grid with 40 mines
-* **Hard**: 30x30 grid with 160 mines
-
-You can also choose a custom grid and mine count when prompted.
-
-### Gameplay
-
-* Type coordinates like `A1`, `B2`, etc. to reveal a cell.
-* The numbers show how many adjacent cells contain mines.
-* Empty cells will automatically reveal neighbors until numbers are encountered.
-* Use **flags** (coming soon) to mark suspected mines.
-
-### Winning / Losing
-
-* If you hit a mine... **game over, homie.** 💥
-* Win by revealing all cells that do **not** contain mines.
-
-*(Get it? MINE... SWEEPER...? 😄)*
-
----
-
 ## 🛠️ Technologies Used
 
 The good old Three Amigos — but CLI style:
@@ -229,9 +203,16 @@ The good old Three Amigos — but CLI style:
 
 ---
 
-## 📃 License
+## 🚀 Improvements & Future Work
 
-This project is licensed under the MIT License.
+Here are some potential enhancements to make the Minesweeper game more feature-rich and user-friendly:
+
+- **Flagging Feature**: Allow users to mark suspected mines with flags to avoid accidental reveals.
+- **Difficulty Levels & Presets**: Add predefined difficulty modes like Easy, Medium, and Hard for quick game setup.
+- **Enhanced Input Validation**: Support flexible user inputs and provide help commands.
+- **Better Board Display**: Use colors and enhanced visuals in the console for clarity.
+- **Multiplayer Mode**: Create competitive or cooperative multiplayer gameplay.
+- **Performance Optimization**: Performance profiling for large boards.
 
 ---
 

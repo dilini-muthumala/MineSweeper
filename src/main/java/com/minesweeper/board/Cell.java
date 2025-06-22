@@ -1,5 +1,9 @@
 package com.minesweeper.board;
 
+/**
+ * Represents a single cell in the Minesweeper grid.
+ * Holds state for whether it's a mine, revealed, or flagged (future), and what character to display.
+ */
 public class Cell {
     private boolean isMine;
     private boolean revealed;
