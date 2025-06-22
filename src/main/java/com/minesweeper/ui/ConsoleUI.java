@@ -10,7 +10,6 @@ import java.util.*;
 
 /**
  * Handles rendering and user interaction in the console.
- *
  * Makes the UI layer swappable, for CLI or test mocks.
  */
 public class ConsoleUI {

@@ -6,7 +6,6 @@ import java.util.*;
  * Represents the game board for Minesweeper.
  * Responsible for initializing the grid, placing mines, and revealing cells.
  * Contains core game logic including flood fill, mine detection, and win condition.
- *
  * Follows SRP and is decoupled from input/output logic.
  */
 public class MinesweeperBoard {
