@@ -25,11 +25,6 @@ public class ConfigLoader {
         }
     }
 
-    //todo: for future improvement
-    public static int getMaxGridSize() {
-        return Integer.parseInt(props.getProperty("max.grid.size", String.valueOf(MAX_DEFAULT_GRID_SIZE)));
-    }
-
     public static double getMaxMineDensity() {
         return Double.parseDouble(props.getProperty("max.mine.density", String.valueOf(MAX_MINE_DENSITY)));
     }
