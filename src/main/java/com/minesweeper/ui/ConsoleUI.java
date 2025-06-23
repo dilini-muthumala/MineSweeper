@@ -30,7 +30,7 @@ public class ConsoleUI {
         System.out.print("Enter the size of the grid (e.g. 4 for a 4x4 grid): \n> ");
         int size = Integer.parseInt(scanner.nextLine());
 
-        int maxMines = (int) Math.floor(size * size * ConfigLoader.getMaxMineDensity());
+        int maxMines = (int) Math.floor(size * size * ConfigLoader.getInstance().getMaxMineDensity());
         int numMines;
         while (true) {
             System.out.print("Enter the number of mines to place on the grid (maximum is " + maxMines + "): \n> ");
